@@ -1,0 +1,13 @@
+---
+
+---
+- hosts: local
+  become: yes
+  tasks:
+    - name: create users
+      user:
+        name: "{{item}}"
+      with_items:
+        - renato
+        - olga
+        - renan
